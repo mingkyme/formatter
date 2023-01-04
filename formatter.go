@@ -11,7 +11,7 @@ func Formating(str string, data map[string]string) string {
 		keys = append(keys, k)
 	}
 	for _, key := range keys {
-		str = strings.ReplaceAll(str, fmt.Sprintf(`{@%s}`, key), data[key])
+		str = strings.ReplaceAll(str, fmt.Sprintf(`@{%s}`, key), data[key])
 	}
 	return str
 }
